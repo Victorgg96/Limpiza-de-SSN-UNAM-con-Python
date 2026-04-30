@@ -1,0 +1,46 @@
+{
+  "run_id": "20260430_093300",
+  "source": "C:\\Users\\vican\\OneDrive\\Escritorio\\Limpiza de SSN-UNAM con Python\\SSNMX_catalogo_19000101_20260407.csv",
+  "outputs": {
+    "bronze": "C:\\Users\\vican\\OneDrive\\Escritorio\\Limpiza de SSN-UNAM con Python\\data\\bronze\\raw",
+    "silver": "C:\\Users\\vican\\OneDrive\\Escritorio\\Limpiza de SSN-UNAM con Python\\data\\silver",
+    "gold": "C:\\Users\\vican\\OneDrive\\Escritorio\\Limpiza de SSN-UNAM con Python\\data\\gold"
+  },
+  "bronze": {
+    "layer": "bronze",
+    "run_id": "20260430_093300",
+    "source_file": "SSNMX_catalogo_19000101_20260407.csv",
+    "source_sha256": "418b5d10a6e63ef337ac08cbaa985acda10633683ea0347d3805427dc7078199",
+    "ingest_timestamp": "2026-04-30T09:33:06",
+    "raw_rows_loaded": 379025,
+    "rows_partitioned_by_year": 379018,
+    "source_metadata": {
+      "header_lines": [
+        "\"Catalogo de sismos - Servicio Sismologico Nacional (SSN) | UNAM - Mexico. DOI: 10.21766/SSNMX/EC/MX\"",
+        "\"Informacion sujeta a cambios. Archivo generado el 2026-04-07 a las 08:14:08 (tiempo del centro de Mexico).\"",
+        "\"Sismicidad del 1900-01-01 al 2026-04-07, todas las magnitudes, todas las profundidades, en todo el pais.\"",
+        "\"Total: 379018 eventos.\""
+      ],
+      "total_reported_events": 379018
+    }
+  },
+  "silver": {
+    "layer": "silver",
+    "run_id": "20260430_093300",
+    "rows_initial": 379025,
+    "rows_after_dedup": 379025,
+    "null_magnitude_rows_removed": 17656,
+    "invalid_geo_rows_removed": 0,
+    "rows_final": 361369
+  },
+  "gold": {
+    "layer": "gold",
+    "run_id": "20260430_093300",
+    "tables": {
+      "gold_sismicidad_regional": 1235,
+      "gold_patrones_temporales": 2016,
+      "gold_sismos_significativos": 1435,
+      "gold_evolucion_historica": 856
+    }
+  }
+}
